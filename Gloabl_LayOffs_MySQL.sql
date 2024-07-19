@@ -7,7 +7,6 @@ INSERT INTO layoff_copy1
 SELECT * FROM layoffs;
 
 SELECT * FROM layoff_copy1;
--- We will work on layoff_copy1 not directly on raw data
 
 -- 2. Remove Duplicates
 
@@ -33,7 +32,7 @@ CREATE TABLE `layoff_copy2` (
   `stage` text,
   `country` text,
   `funds_raised_millions` int DEFAULT NULL,
-  `row_num` int                                       -- creating another table similar to layoff_copy1 but with an additional column row-num
+  `row_num` int                                       -- creating another table similar to layoff_copy1 but with an additional column row_num
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci; 
 
 INSERT INTO layoff_copy2
